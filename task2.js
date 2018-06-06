@@ -1,10 +1,8 @@
 let number = process.argv[2];
 
 function fibonacci(num) {
-	if (num === 0 || num === 1) {
+	if (num <= 0 || num === 1) {
 		process.stdout.write(num+'\n');
-	} else if (num < 0) {
-		process.stdout.write('0\n');
 	} else {
 		let arr = [0, 1];
 		for (let i = 1; i < num; i++) {
