@@ -9,14 +9,13 @@ function transformString(str) {
 		if (k.charCodeAt() === 65 ||
 			k.charCodeAt() === 69 ||
 			k.charCodeAt() === 73 ||
-			k.charCodeAt() === 74 ||
 			k.charCodeAt() === 79 ||
 			k.charCodeAt() === 85 ||
 			k.charCodeAt() === 89) {
 			a += str.charAt(i);
 		} else if (k.charCodeAt() > 65 && k.charCodeAt() <= 90) {
 			b += str.charAt(i);
-		} else if (str.charCodeAt(i) >= 48 && str.charCodeAt(i) <= 57) {
+		} else if (k.charCodeAt() >= 48 && k.charCodeAt() <= 57) {
 			c += str.charAt(i);
 		}
 	}
