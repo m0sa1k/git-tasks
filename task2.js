@@ -1,21 +1,11 @@
 let number = process.argv[2];
 
-function fibonacci(num) {
-	if (num <= 1) {
-		return num;
+function fibonacci(n) {
+	if (n < 0) {
+		return fibonacci(n + 2) - fibonacci(n + 1);
 	} else {
-		let a = 1,
-			b = 1;
-		for (let i = 3; i <= num; i++) {
-			let c = a + b;
-			a = b;
-			b = c;
-		}
-		return b;
+		return (n == 0 || n == 1) ? n : fibonacci(n - 1) + fibonacci(n - 2);
 	}
 }
 
-if ( !isNaN(Number(number)) ) {
-	process.stdout.write(fibonacci(Number(number))+'\n');
-}
-
+process.stdout.write(fibonacci(Number(number))+'\n');
