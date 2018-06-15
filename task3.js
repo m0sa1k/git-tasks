@@ -19,6 +19,5 @@ function transformString(str) {
 			c += str.charAt(i);
 		}
 	}
-
 	return process.stdout.write(a+' '+b+' '+c+'\n');
 }
